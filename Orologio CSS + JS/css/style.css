@@ -27,7 +27,7 @@ div.clock:before {
 
 div.clock-face {
   position: absolute;
-  top: 0;
+  top: 3px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -52,5 +52,5 @@ div.hand {
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.5s;
-
+  transition-timing-function: cubic-bezier(0.76, 1.42, 0.43, 0.89);
 }
