@@ -54,3 +54,13 @@ div.hand {
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.01, 1.65, 0.27, 0.63);
 }
+
+div.hand.seconds {
+  height: 2px;
+  background-color: red;
+}
+
+div.hand.hours {
+  width: 45%;
+  margin-left: 5%;
+}
