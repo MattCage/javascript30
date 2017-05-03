@@ -14,8 +14,13 @@ function setDate() {
   secondsHand.style.transform = "rotate(" + secondsInDegrees + "deg)";
   minutesHand.style.transform = "rotate(" + minutesInDegrees + "deg)";
   hoursHand.style.transform = "rotate(" + hoursInDegrees + "deg)";
-
-  console.log(seconds);
+  
+  if( secondsInDegrees < 96 ) {
+    secondsHand.style.transition = "none";
+  } else {
+    secondsHand.style.transition = "all 0.5s";
+    secondsHand.style.transitionTimingFunction = "cubic-bezier(0.01, 1.65, 0.27, 0.63)";
+  }
 
 }
 
