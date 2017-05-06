@@ -1,3 +1,22 @@
+/* Definiamo le variabili nella "root", così da averle valide globalmente; le varabili in CSS si dichiarano con due trattini prima del nome. */
+:root {
+  --color: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+/* Assegnamo agli attributi le variabili includendole in var() */
+img {
+  padding: var(--spacing);
+  background-color: var(--color);
+  filter: blur(var(--blur));
+}
+
+span.title-color {
+  color: var(--color);
+}
+
+/*** Basic styling ***/
 body {
   background: #193549;
   color: white;
@@ -12,7 +31,7 @@ body {
 }
 
 a {
-  color: var(--base);
+  color: var(--color);
   text-decoration: none;
 }
 
