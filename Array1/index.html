@@ -21,13 +21,42 @@
         "Berle, Wilton", "Berlin, Irving", "Berne, Eric", "Bernhard, Sandra", "Berra, Yogi", "Berry, Halle", "Berry, Wendell", "Bethea, Erin", "Bevan, Aneurin", "Bevel, Ken", "Biden, Joseph", "Bierce, Ambrose",
         "Biko, Steve", "Billings, Josh", "Biondo, Frank", "Birrell, Augustine", "Black, Elk", "Blair, Robert", "Blair, Tony", "Blake, William"];
 
-      // Array.prototype.filter()
-      // Filtra l'array mantenendo gli elementi che soddisfano la condizione
+      /* Array.prototype.filter()
+       * Filtra l'array mantenendo solo gli elementi che soddisfano la condizione
+       */
       var fifteen = inventors.filter( function(inventor) {
         if( inventor.year >= 1500 && inventor.year < 1600 ) return true;
-      })
+      });
 
+      /* Altri metodi:
+      var fifteen = inventors.filter( inventor => {
+        if( inventor.year >= 1500 && inventor.year < 1600 ) return true;
+      })
+      *
+      var fifteen = inventors.filter( inventor => inventor.year >= 1500 && inventor.year < 1600 )
+      */
+
+      // Mostro i dati in una tabella invece che come testo
       console.table(fifteen);
+
+      /* Array.prototype.map()
+       * Crea un nuovo array con lo stesso numero di elementi ma contenenti solo i valori cercati come parametri
+       */
+      var fullNames = inventors.map( inventor => inventor.first + " " + inventor.last );
+      console.log(fullNames);
+
+      /* Array.prototype.sort()
+       * Ordina gli elementi dell'array con il metodo bubblesort, in base alla condizione indicata
+       */
+      var ordered = inventors.sort( (a, b) => a.year > b.year ? 1 : -1 );
+      /* Versione corta della seguente funzione:
+      var ordered = inventors.sort( function(a, b) {
+        if( a.year > b.year ) return 1;
+        else return -1;
+      })
+      */
+
+      console.table(ordered);
 
     </script>
   </body>
