@@ -79,6 +79,19 @@
       });
       console.log(alpha);
 
+      /* Esercizio: Somma le occorrenze, o istanze, di ogni singolo elemento di questo array
+      */
+      var data = ["auto", "auto", "camion", "camion", "bici", "piedi", "monociclo", "auto", "van", "bici", "piedi", "auto", "van", "auto", "camion"];
+      var trasporti = data.reduce( function(obj, item) {
+        if(!obj[item]) {
+          obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+      }, {});
+
+      console.log(trasporti);
+
     </script>
   </body>
 </html>
